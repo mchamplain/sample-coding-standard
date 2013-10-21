@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<ruleset name="SampleStandard">
+    <description>A custom coding standard.</description>
+
+
+    <rule ref="PEAR.Classes.ClassDeclaration"/>
+    <!-- force bracket at end of line for  if/for/... -->
+    <!--<rule ref="PEAR.ControlStructures.ControlSignature"/>-->
+
+    <!-- Functions should be called with no spaces between the function name, the opening parenthesis, -->
+    <!-- and the first parameter; spaces between commas and each parameter, and no space between the last -->
+    <!-- parameter, the closing parenthesis, and the semicolon. -->
+    <rule ref="PEAR.Functions.FunctionCallSignature"/>
+    <!-- ensure that parameters defined for a function that have a default value come at the end of the function signature. -->
+    <rule ref="PEAR.Functions.ValidDefaultValue"/>
+    <!-- Checks that the closing braces of scopes are aligned correctly. -->
+    <rule ref="PEAR.WhiteSpace.ScopeClosingBrace"/>
+    <!-- Tests for functions outside of classes.  ex:  Consider putting global function "%s" in a static class -->
+    <rule ref="Squiz.Functions.GlobalFunction"/>
+
+
+
+    <rule ref="Generic.CodeAnalysis.EmptyStatement"/>
+    <rule ref="Generic.CodeAnalysis.ForLoopShouldBeWhileLoop"/>
+    <rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall"/>
+    <rule ref="Generic.CodeAnalysis.JumbledIncrementer"/>
+    <rule ref="Generic.CodeAnalysis.UnconditionalIfStatement"/>
+    <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
+    <rule ref="Generic.CodeAnalysis.UselessOverridingMethod"/>
+
+    <!--<rule ref="Generic.ControlStructures.InlineControlStructure"/>-->
+
+    <!-- Lines shouldn't be too long, show errors at 120 chars -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120"/>
+            <property name="absoluteLineLimit" value="120"/>
+        </properties>
+    </rule>
+    <!-- Use Unix newlines -->
+    <rule ref="Generic.Files.LineEndings">
+        <properties>
+            <property name="eolChar" value="\n"/>
+        </properties>
+    </rule>
+
+    <!-- Ensures each statement is on a line by itself. -->
+    <rule ref="Generic.Formatting.DisallowMultipleStatements"/>
+    <!-- Ensures there is no space after cast tokens. -->
+    <rule ref="Generic.Formatting.NoSpaceAfterCast"/>
+
+    <!-- Checks that calls to methods and functions are spaced correctly. -->
+    <rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
+    <!-- Checks that the opening brace of a function is on the line after the function declaration. -->
+    <rule ref="Generic.Functions.OpeningFunctionBraceBsdAllman"/>
+
+    <!-- Checks the cyclomatic complexity (McCabe) for functions. -->
+    <rule ref="Generic.Metrics.CyclomaticComplexity"/>
+    <!-- Checks the nesting level for methods. -->
+    <rule ref="Generic.Metrics.NestingLevel"/>
+
+    <rule ref="Generic.NamingConventions.CamelCapsFunctionName"/>
+    <rule ref="Generic.NamingConventions.ConstructorName"/>
+    <rule ref="Generic.NamingConventions.UpperCaseConstantName"/>
+
+    <rule ref="Generic.PHP.CharacterBeforePHPOpeningTag"/>
+    <rule ref="Generic.PHP.ClosingPHPTag"/>
+    <rule ref="Generic.PHP.DeprecatedFunctions"/>
+    <rule ref="Generic.PHP.DisallowShortOpenTag"/>
+    <!-- Discourages the use of alias functions that are kept in PHP for compatibility with older versions. -->
+    <rule ref="Generic.PHP.ForbiddenFunctions"/>
+    <!-- Checks that all PHP keywords are lowercase. -->
+    <rule ref="Generic.PHP.LowerCaseKeyword"/>
+    <!-- Throws an error or warning when any code prefixed with an asperand is encountered.  ie:  @in_array() -->
+    <rule ref="Generic.PHP.NoSilencedErrors"/>
+    <!-- Checks that all uses of true, false and null are lowercase. -->
+    <rule ref="Generic.PHP.LowerCaseConstant"/>
+    <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
+
+
+
+
+
+</ruleset>
